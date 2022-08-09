@@ -16,7 +16,7 @@ class Welcome extends StatelessWidget {
           ),
           centerTitle: true,
         ),
-        body: Container(
+        body: SizedBox(
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -26,16 +26,17 @@ class Welcome extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, "/login");
                 },
-                child: Text(
-                  "login",
-                  style: TextStyle(fontSize: 24),
-                ),
+                
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.purple),
                   padding: MaterialStateProperty.all(
                       EdgeInsets.symmetric(horizontal: 79, vertical: 10)),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(27))),
+                ),
+                child: Text(
+                  "login",
+                  style: TextStyle(fontSize: 24),
                 ),
               ),
               SizedBox(
@@ -45,10 +46,7 @@ class Welcome extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, "/signup");
                 },
-                child: Text(
-                  "SIGNUP",
-                  style: TextStyle(fontSize: 17, color: Colors.grey[850]),
-                ),
+                
                 style: ButtonStyle(
                   backgroundColor:
                       MaterialStateProperty.all(Colors.purple[100]),
@@ -56,6 +54,10 @@ class Welcome extends StatelessWidget {
                       EdgeInsets.symmetric(horizontal: 77, vertical: 13)),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(27))),
+                ),
+                child: Text(
+                  "SIGNUP",
+                  style: TextStyle(fontSize: 17, color: Colors.grey[850]),
                 ),
               ),
             ],
