@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 
 class LoginForm extends StatelessWidget {
@@ -8,8 +9,9 @@ class LoginForm extends StatelessWidget {
     return Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: (){  Navigator.pop(context);  },
-          child: Icon(Icons.home),
+          
           backgroundColor: Colors.purple[400],
+          child: Icon(Icons.home),
         ),
         appBar: AppBar(
           title: Text(
@@ -73,16 +75,17 @@ class LoginForm extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Text(
-                  "login",
-                  style: TextStyle(fontSize: 24),
-                ),
+                
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.purple),
                   padding: MaterialStateProperty.all(
                       EdgeInsets.symmetric(horizontal: 106, vertical: 10)),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(27))),
+                ),
+                child: Text(
+                  "login",
+                  style: TextStyle(fontSize: 24),
                 ),
               ),
             ],
