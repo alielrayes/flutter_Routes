@@ -12,8 +12,9 @@ class Signup extends StatelessWidget {
         onPressed: () {
           Navigator.pop(context);
         },
-        child: Icon(Icons.home),
+        
         backgroundColor: Colors.purple[400],
+        child: Icon(Icons.home),
       ),
       appBar: AppBar(
         title: Text(
@@ -99,16 +100,17 @@ class Signup extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, "/");
               },
-              child: Text(
-                "Sign up",
-                style: TextStyle(fontSize: 22),
-              ),
+              child: 
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.purple),
                 padding: MaterialStateProperty.all(
                     EdgeInsets.symmetric(horizontal: 91, vertical: 10)),
                 shape: MaterialStateProperty.all(RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(27))),
+              ),
+              Text(
+                "Sign up",
+                style: TextStyle(fontSize: 22),
               ),
             ),
           ],
