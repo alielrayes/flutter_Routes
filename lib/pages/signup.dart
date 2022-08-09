@@ -100,7 +100,7 @@ class Signup extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, "/");
               },
-              child: 
+               
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.purple),
                 padding: MaterialStateProperty.all(
@@ -108,7 +108,7 @@ class Signup extends StatelessWidget {
                 shape: MaterialStateProperty.all(RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(27))),
               ),
-              Text(
+              child: Text(
                 "Sign up",
                 style: TextStyle(fontSize: 22),
               ),
